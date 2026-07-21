@@ -14,7 +14,7 @@ const sumTwoNumbers = (a, b) => {
 const sum = (a,b) => a + b;
 
 sayHello("Ayush");
-sayHi("Piyush");
+sayHi("Balli");
 console.log("sum=",sumTwoNumbers(5, 10));
 console.log("sum=",sum(5, 10));
 
