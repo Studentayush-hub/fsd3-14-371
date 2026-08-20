@@ -1,0 +1,24 @@
+[
+  {
+    "id": null,
+    "price": null,
+    "qty": null
+  },
+  {
+    "id": 10,
+    "name": "maggie",
+    "price": 20,
+    "qty": 1
+  },
+  {
+    "id": 1,
+    "price": null,
+    "qty": null
+  },
+  {
+    "id": 101,
+    "name": "maggie",
+    "price": 30,
+    "qty": 2
+  }
+]
