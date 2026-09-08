@@ -1,6 +1,7 @@
 import http from "http";
 //import * as teams from 'teams.js';
 import { getAllTeams } from './teams.js';
+import {parse as parseUrl} from 'url';
 
 const PORT = 5000;
 const sendJson = (res, statusCode, data) => {
@@ -22,7 +23,27 @@ const parseJSONBody = (req) => {
         });
     });
 };
-const server = http.createServer((req, res) => {});
+const server = http.createServer(async (req, res) => {
+    const {pathname,query} = parseUrl(req.url, true);
+    console.log('pathname:', pathname);
+    console.log('query:', query);
+    console.log('method:', req.method);
+
+    if(pathname === 'api/v1/teams' && req.method === 'GET') {
+        
+        let teams = getAllTeams();
+        return sendJson(res, 200, teams);
+        
+    } else if(pathname === 'api/v1/teams' && req.method === 'POST') {
+        const newTeam = await parseJSONBody(req);
+        const team = addTeam(newTeam);
+        return sendJson(res, 201, team);
+    } 
+    else {
+        res.statusCode = 404;
+        res.end();
+    }
+});
 
 
 
