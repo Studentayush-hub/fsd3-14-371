@@ -1,12 +1,13 @@
 import http from "http";
 //import * as teams from 'teams.js';
-import { getAllTeams } from './teams.js';
+import { getAllTeams , addTeam, getTeamById } from './teams.js';
 import {parse as parseUrl} from 'url';
+import { parse } from "path";
 
 const PORT = 5000;
-const sendJson = (res, statusCode, data) => {
+const sendJson = (res, statusCode, data, keyword, msg) => {
     res.writeHead(statusCode, { 'Content-Type': 'application/json' });
-    res.end(data === "undefined" ? "" : JSON.stringify(data));
+    res.end(data === "undefined" ? "" : JSON.stringify({[keyword]: msg, data}));
 };
 const parseJSONBody = (req) => {
     return new Promise((resolve, reject) => {
@@ -16,7 +17,7 @@ const parseJSONBody = (req) => {
         });
         req.on('end', () => {
             try {
-                resolve(JSON.parse(body));
+                resolve(body ? JSON.parse(body) : {});
             } catch (error) {
                 reject(error);
             }
@@ -32,12 +33,16 @@ const server = http.createServer(async (req, res) => {
     if(pathname === 'api/v1/teams' && req.method === 'GET') {
         
         let teams = getAllTeams();
-        return sendJson(res, 200, teams);
+        return sendJson(res, 200, teams, "count", teams.length);
         
     } else if(pathname === 'api/v1/teams' && req.method === 'POST') {
-        const newTeam = await parseJSONBody(req);
-        const team = addTeam(newTeam);
-        return sendJson(res, 201, team);
+        const { tname, tl, members } = await parseJSONBody(req);
+        if(!tname || !tl || !members)
+            return sendJson(res, 400,{
+               error: "Team Name", "Team Leader, or Members not defined ",
+        });
+        const team = addTeam({tname, tl, members});
+        return sendJson(res, 201, team, "Message", "Team registered successfully");
     } 
     else {
         res.statusCode = 404;
