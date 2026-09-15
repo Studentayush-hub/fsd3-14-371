@@ -14,14 +14,15 @@ let nextId = 3;
     return team;
 };
 
-export const updateTeamById = (id, updeatedTeam) => {
+export const updateTeamById = (id, updatedTeam) => {
     const team =   getTeamById(id);
     if(!team) return null;
-    Object.assign(team, updeatedTeam);
+    Object.assign(team, updatedTeam);
     return team;
     
-    return null;
+    
 };
+
 
 export const deleteTeam = (id) => {
 
@@ -30,3 +31,4 @@ export const deleteTeam = (id) => {
     teams.splice(index, 1);
     return true;
 };
+
