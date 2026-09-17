@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | About Our Wireless Ecosystem & Vision</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        cyanNeon: '#00f2fe',
+                        blueNeon: '#4facfe',
+                        darkBg: '#0b0f19',
+                        darkCard: '#131b2e',
+                        accentGlow: 'rgba(0, 242, 254, 0.15)'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-panel {
+            background: rgba(19, 27, 46, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .light body {
+            background-color: #f4f6fa;
+            color: #0b0f19;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0b0f19; }
+        ::-webkit-scrollbar-thumb { background: #1f293d; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00f2fe; }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 transition-colors duration-300 min-h-screen selection:bg-cyanNeon selection:text-black">
+
+    <header class="sticky top-0 z-50 glass-panel border-b border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyanNeon to-blueNeon flex items-center justify-center text-darkBg shadow-lg shadow-cyanNeon/20">
+                        <i class="fa-brands font-extrabold text-xl fa-bluetooth-b"></i>
+                    </div>
+                    <span class="text-2xl font-black tracking-wider text-white dark:text-white light:text-gray-900">AURA<span class="text-cyanNeon">.</span></span>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+                    <a href="index.html" class="hover:text-cyanNeon transition-colors">Home</a>
+                    <a href="#vision" class="hover:text-cyanNeon transition-colors text-cyanNeon font-semibold">Our Story</a>
+                    <a href="#stats" class="hover:text-cyanNeon transition-colors">Impact</a>
+                    <a href="#timeline" class="hover:text-cyanNeon transition-colors">Milestones</a>
+                    <a href="#team" class="hover:text-cyanNeon transition-colors">Leadership</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="flex items-center space-x-4">
+                    <button id="themeToggle" class="p-2.5 rounded-xl bg-gray-800/80 hover:bg-gray-700 text-gray-300 transition-all border border-gray-700/50" title="Toggle Light/Dark Theme">
+                        <i class="fa-solid fa-moon text-cyanNeon" id="themeIcon"></i>
+                    </button>
+                    <a href="enquiry.html" class="hidden sm:inline-flex px-5 py-2.5 rounded-xl bg-cyanNeon/10 border border-cyanNeon/40 text-cyanNeon font-bold text-xs hover:bg-cyanNeon hover:text-darkBg transition-all">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="vision" class="relative overflow-hidden pt-12 pb-20 lg:py-28">
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cyanNeon/10 blur-[130px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-cyanNeon/30 bg-cyanNeon/5 text-cyanNeon text-xs font-semibold uppercase tracking-wider mb-6">
+                <i class="fa-solid fa-microchip text-xs"></i>
+                <span>Acoustic Innovation & Engineering</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white max-w-4xl mx-auto leading-tight">
+                Pioneering the Next Era of <br/>
+                <span class="text-gradient">Lossless Audio Wireless Mesh</span>
+            </h1>
+
+            <p class="mt-6 text-gray-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                Founded in 2021, AURA was created with one relentless mission: to eradicate wireless audio latency, preserve high-fidelity acoustics, and engineer iconic hardware that seamlessly binds your digital lifestyle.
+            </p>
+        </div>
+    </section>
+
+    <section id="stats" class="py-12 border-y border-gray-800/80 bg-gray-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl sm:text-5xl font-black text-cyanNeon font-mono" id="counter1">0</div>
+                    <div class="text-xs uppercase tracking-wider text-gray-400 font-semibold mt-2">Active Users Worldwide</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl sm:text-5xl font-black text-white font-mono" id="counter2">0</div>
+                    <div class="text-xs uppercase tracking-wider text-gray-400 font-semibold mt-2">Patents Issued</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl sm:text-5xl font-black text-cyanNeon font-mono" id="counter3">0</div>
+                    <div class="text-xs uppercase tracking-wider text-gray-400 font-semibold mt-2">Global Industry Awards</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl sm:text-5xl font-black text-white font-mono" id="counter4">0</div>
+                    <div class="text-xs uppercase tracking-wider text-gray-400 font-semibold mt-2">Avg Latency (ms)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-white">Our Core Engineering Pillars</h2>
+                <p class="text-gray-400 mt-2 text-sm">Design without compromises. Acoustics without limits.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-panel p-8 rounded-2xl border border-gray-800 hover:border-cyanNeon/50 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-cyanNeon/10 flex items-center justify-center text-cyanNeon mb-6 text-xl">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Ultra-Low Latency</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Custom Bluetooth 5.4 PHY layer tuning reduces transmission delay down to 20ms, allowing real-time gaming and pro studio playback without desynchronization.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl border border-gray-800 hover:border-cyanNeon/50 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-cyanNeon/10 flex items-center justify-center text-cyanNeon mb-6 text-xl">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Precision DSP Acoustics</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Every earbud and acoustic speaker undergoes multi-channel digital signal processing (DSP) calibration to ensure exact studio-grade sound profiles.
+                    </p>
+                </div>
+
+                <div class="glass-panel p-8 rounded-2xl border border-gray-800 hover:border-cyanNeon/50 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-cyanNeon/10 flex items-center justify-center text-cyanNeon mb-6 text-xl">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Sustainable Materials</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        We prioritize 100% recycled aluminum structural chassis and ocean-bound plastics for our driver housings and packaging.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="py-20 bg-gray-900/40 border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-white">The Journey of Innovation</h2>
+                <p class="text-gray-400 mt-2 text-sm">How AURA grew from a stealth acoustic laboratory into an ecosystem leader.</p>
+            </div>
+
+            <!-- Vertical Timeline Container -->
+            <div class="relative border-l-2 border-cyanNeon/30 ml-4 md:ml-32 space-y-12">
+                <!-- Year 2021 -->
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-darkBg border-4 border-cyanNeon"></span>
+                    <span class="hidden md:block absolute -left-28 top-1 text-cyanNeon font-mono font-bold text-sm">2021</span>
+                    <div class="glass-panel p-6 rounded-2xl border border-gray-800">
+                        <span class="md:hidden text-cyanNeon font-mono font-bold text-xs mb-2 block">2021</span>
+                        <h3 class="text-lg font-bold text-white">Stealth Research & Genesis</h3>
+                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">
+                            AURA founded in San Jose, CA by audio engineers from Stanford Sound Labs. First patent filed for spatial multiplexing audio packet loss recovery.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Year 2023 -->
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-darkBg border-4 border-cyanNeon"></span>
+                    <span class="hidden md:block absolute -left-28 top-1 text-cyanNeon font-mono font-bold text-sm">2023</span>
+                    <div class="glass-panel p-6 rounded-2xl border border-gray-800">
+                        <span class="md:hidden text-cyanNeon font-mono font-bold text-xs mb-2 block">2023</span>
+                        <h3 class="text-lg font-bold text-white">Launch of AURA Studio Pro</h3>
+                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">
+                            Debuted flagship over-ear wireless headphones featuring groundbreaking LDAC codec support and adaptive active noise cancellation up to -48dB.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Year 2026 -->
+                <div class="relative pl-8 md:pl-12">
+                    <span class="absolute -left-[11px] top-1.5 w-5 h-5 rounded-full bg-darkBg border-4 border-cyanNeon"></span>
+                    <span class="hidden md:block absolute -left-28 top-1 text-cyanNeon font-mono font-bold text-sm">2026</span>
+                    <div class="glass-panel p-6 rounded-2xl border border-gray-800">
+                        <span class="md:hidden text-cyanNeon font-mono font-bold text-xs mb-2 block">2026</span>
+                        <h3 class="text-lg font-bold text-white">Bluetooth 5.4 Ecosystem Expansion</h3>
+                        <p class="text-gray-400 text-sm mt-2 leading-relaxed">
+                            Crossed 1 million active devices globally with multi-point ecosystem synchronizers, smart controllers, and portable hi-fi transmitters.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-white">Meet The Innovators</h2>
+                <p class="text-gray-400 mt-2 text-sm">Architects behind our sound engineering and industrial hardware.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Member 1 -->
+                <div class="glass-panel p-5 rounded-2xl border border-gray-800 text-center group">
+                    <div class="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-cyanNeon/40 group-hover:border-cyanNeon transition-all">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80" alt="CEO" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-base font-bold text-white">Dr. Aris Thorne</h3>
+                    <p class="text-xs text-cyanNeon font-medium mb-3">Founder & CEO</p>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">Former DSP Acoustic Lead at Sennheiser, PhD in Psychoacoustics.</p>
+                </div>
+
+                <!-- Member 2 -->
+                <div class="glass-panel p-5 rounded-2xl border border-gray-800 text-center group">
+                    <div class="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-cyanNeon/40 group-hover:border-cyanNeon transition-all">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=80" alt="VP Engineering" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-base font-bold text-white">Kenji Takahashi</h3>
+                    <p class="text-xs text-cyanNeon font-medium mb-3">VP of Hardware Engineering</p>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">Pioneer in RF antenna miniaturization and Bluetooth LE Audio protocol.</p>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="glass-panel p-5 rounded-2xl border border-gray-800 text-center group">
+                    <div class="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-cyanNeon/40 group-hover:border-cyanNeon transition-all">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&auto=format&fit=crop&q=80" alt="Head of Design" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-base font-bold text-white">Maya Lin</h3>
+                    <p class="text-xs text-cyanNeon font-medium mb-3">Head of Industrial Design</p>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">Red Dot Design award recipient focused on ergonomic acoustic wear.</p>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="glass-panel p-5 rounded-2xl border border-gray-800 text-center group">
+                    <div class="w-24 h-24 mx-auto rounded-full overflow-hidden mb-4 border-2 border-cyanNeon/40 group-hover:border-cyanNeon transition-all">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=80" alt="Chief Architect" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-base font-bold text-white">David Miller</h3>
+                    <p class="text-xs text-cyanNeon font-medium mb-3">Chief Firmware Architect</p>
+                    <p class="text-xs text-gray-400 leading-relaxed mb-4">Specialist in ultra-low power microcontroller firmware and Codecs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gradient-to-r from-cyanNeon/10 via-darkBg to-blueNeon/10 border-t border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold text-white">Have Questions or Bulk Partnership Orders?</h2>
+            <p class="text-gray-400 mt-3 text-sm max-w-xl mx-auto">Get in touch with our engineering and sales consultation specialists today.</p>
+            <div class="mt-8">
+                <a href="enquiry.html" class="px-8 py-4 rounded-xl bg-gradient-to-r from-cyanNeon to-blueNeon text-darkBg font-bold text-sm shadow-lg hover:shadow-cyanNeon/30 transition-all inline-flex items-center space-x-2">
+                    <span>Submit Enquiry Form</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 border-t border-gray-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center text-xs text-gray-500">
+            <p>&copy; 2026 AURA Wireless Technology Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Theme toggle
+        const themeBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const html = document.documentElement;
+
+        themeBtn.addEventListener('click', () => {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                themeIcon.className = "fa-solid fa-sun text-yellow-500";
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                themeIcon.className = "fa-solid fa-moon text-cyanNeon";
+            }
+        });
+
+        // Animated Statistics Counter
+        function animateCounter(id, start, end, duration, suffix = '') {
+            let obj = document.getElementById(id);
+            let current = start;
+            let range = end - start;
+            let increment = end > start ? 1 : -1;
+            let stepTime = Math.abs(Math.floor(duration / range));
+            
+            let timer = setInterval(() => {
+                current += Math.ceil(range / 50);
+                if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+                    current = end;
+                    clearInterval(timer);
+                }
+                obj.innerText = current.toLocaleString() + suffix;
+            }, 30);
+        }
+
+        window.onload = function() {
+            animateCounter('counter1', 0, 1250000, 1500, '+');
+            animateCounter('counter2', 0, 48, 1200, '');
+            animateCounter('counter3', 0, 18, 1000, '');
+            animateCounter('counter4', 0, 20, 800, 'ms');
+        };
+    </script>
+</body>
+</html>
