@@ -40,3 +40,5 @@ any components include styles:
       '''
        then apply with style attribute and pass the object.
  3. inline css= in this method we use two curly braces with style attribute all the css property must be single word for eg:- text-align becomes text-Align
+
+ # app.jsx should have minimum code.
