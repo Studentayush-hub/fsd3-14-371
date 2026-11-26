@@ -41,4 +41,24 @@ any components include styles:
        then apply with style attribute and pass the object.
  3. inline css= in this method we use two curly braces with style attribute all the css property must be single word for eg:- text-align becomes text-Align
 
- # app.jsx should have minimum code..
+ # app.jsx should have minimum code.
+
+ # by default button in html is submit button.
+
+ # add tailwind to existing react project
+ 1. open terminal and go to project frontend folder.
+ 2. install tailwind by
+ ` npm install tailwindcss @tailwindcss/vite`
+ 3. open vite.config.js
+ 4. add `import tailwindcss from '@tailwindcss/vite'` in first line
+ 5. add 'tailwindcss()' 
+
+ import { defineConfig } from 'vite'
+
+6. ```
+      // https://vite.dev/config/
+      export default defineConfig({
+      plugins: [react(), tailwind()],
+       });
+  ```
+  7. open src
